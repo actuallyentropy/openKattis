@@ -2,9 +2,7 @@
 
 package raggedright;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -19,13 +17,11 @@ public class RaggedRight
         while(input.hasNextLine())
         {
             String line = input.nextLine();
-            
-            if(line.length() > longest)
+            if(longest < line.length())
                 longest = line.length();
             lines.add(line);
-            System.out.println(line);
         }
-        
+              
         int raggedness = 0;
         
         for(int i = 0; i < lines.size() - 1; i++)
